@@ -1,16 +1,10 @@
-# This is a sample Python script.
+def common_elements():
+    multiples_of_3 = {i for i in range(100) if i % 3 == 0}
+    multiples_of_5 = {i for i in range(100) if i % 5 == 0}
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    common_set = multiples_of_3.intersection(multiples_of_5)
 
+    return common_set
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
+print('ОК')
